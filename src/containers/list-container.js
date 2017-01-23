@@ -23,13 +23,13 @@ export default class ListContainer extends Component{
     }
 
   componentDidMount(){
-    $.get(`${API_BASE_URL}/{endpoint}`).then(response =>{this.setState({pokemon: response});
+    $.get(`${API_BASE_URL}/pokemon`).then(response =>{this.setState({pokemons: response});
 
     })
   }
 
   render() {
-      return<Pokemons
+      return <Pokemons
               currentPokemon={this.state.currentPokemon}
               pokemons={this.state.pokemons}
               selectPokemon={this.getPokemon} />

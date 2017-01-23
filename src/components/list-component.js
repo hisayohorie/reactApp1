@@ -9,7 +9,7 @@ export default function Pokemons({
   return(
     <div>
       <div>Current Pokemon: {currentPokemon} </div>
-      {pokemons.map(pokemon => <Pokemon Name={pokemon.name} selectPokemon={() => selectPokemon(pokemon.name)}/>)}
+      {pokemons.map(pokemon => <Pokemon name={pokemon.name} selectPokemon={() => selectPokemon(pokemon.name)}/>)}
     </div>
   );
 }
