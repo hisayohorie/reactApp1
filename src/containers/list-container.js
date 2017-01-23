@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 import Pokemons from '../components/list-component';
 
-const API_BASE_URL = 'http://pokeapi.co/api/v2/';
+const API_BASE_URL = 'http://pokeapi.co/api/v2';
 
 export default class ListContainer extends Component{
   constructor() {
@@ -23,7 +23,7 @@ export default class ListContainer extends Component{
     }
 
   componentDidMount(){
-    $.get(`${API_BASE_URL}/pokemon`).then(response =>{this.setState({pokemons: response});
+    $.get(`${API_BASE_URL}/pokemon`).then(response =>{console.log(response);this.setState({pokemons: response.results});
 
     })
   }
