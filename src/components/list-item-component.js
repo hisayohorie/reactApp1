@@ -6,4 +6,5 @@ export default function Pokemon(props) {
 
 Pokemon.propTypes ={
   name: PropTypes.string.isRequired,
+  key: PropTypes.number.isRequired,
 };

@@ -5,6 +5,7 @@ import Pokemons from '../components/list-component';
 
 const API_BASE_URL = 'http://pokeapi.co/api/v2';
 
+
 export default class ListContainer extends Component{
   constructor() {
     super();
@@ -24,8 +25,7 @@ export default class ListContainer extends Component{
 
   componentDidMount(){
     $.get(`${API_BASE_URL}/pokemon`).then(response =>{console.log(response);this.setState({pokemons: response.results});
-
-    })
+  })
   }
 
   render() {
